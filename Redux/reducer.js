@@ -1,4 +1,4 @@
-function reducer(state = {loggedin: false, token: null, screen: 'home', userData: {}}, action) {
+export default function reducer(state = {loggedIn: false, token: null, screen: 'home', userData: {}}, action) {
 
     switch (action.type) {
         case 'LOGIN':

@@ -2,6 +2,8 @@ import { StatusBar } from 'expo-status-bar';
 import React, { useState, useEffect } from 'react';
 import { StyleSheet, View, Button } from 'react-native';
 import { Text } from 'react-native-elements'
+import store from '../Redux/store'
+import { login } from '../Redux/actions'
 
 
 export default function WelcomeContent (props) {
