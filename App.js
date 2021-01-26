@@ -3,11 +3,12 @@ import React from 'react';
 import { StyleSheet, Text, View, SafeAreaView } from 'react-native';
 import Welcome from './Components/Welcome'
 import Landing from './Components/Landing'
-import store from './Redux/store'
+import { useSelector } from 'react-redux'
+
 
 export default function App() {
   
-  const loggedIn = store.getState().loggedIn
+  const loggedIn = useSelector(state => state.loggedIn)
 
   if (loggedIn) {
     return (
