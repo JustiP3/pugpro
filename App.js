@@ -2,6 +2,7 @@ import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { StyleSheet, Text, View, SafeAreaView } from 'react-native';
 import Welcome from './Components/Welcome'
+import Landing from './Components/Landing'
 import store from './Redux/store'
 
 export default function App() {
@@ -11,7 +12,7 @@ export default function App() {
   if (loggedIn) {
     return (
       <SafeAreaView style={styles.container}>
-        <Welcome />
+        <Landing />
         <StatusBar style="auto" />
       </SafeAreaView>
     );
