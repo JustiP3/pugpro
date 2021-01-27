@@ -3,21 +3,21 @@ import React from 'react';
 import { StyleSheet, Text, View, SafeAreaView } from 'react-native';
 import Welcome from './Components/Welcome'
 import Landing from './Components/Landing'
-import { useSelector } from 'react-redux'
+//import { useSelector } from 'react-redux'
 
 
 export default function App() {
   
-  const loggedIn = useSelector(state => state.loggedIn)
+  //const loggedIn = useSelector(state => state.loggedIn)
 
-  if (loggedIn) {
+ // if (loggedIn) {
     return (
       <SafeAreaView style={styles.container}>
         <Landing />
         <StatusBar style="auto" />
       </SafeAreaView>
     );
-  } else {
+ /* } else {
     return (
       <SafeAreaView style={styles.container}>
         <Welcome />
@@ -25,7 +25,7 @@ export default function App() {
       </SafeAreaView>
     );
   }
-  
+  */
 }
 
 const styles = StyleSheet.create({
