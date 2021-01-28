@@ -1,7 +1,7 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { View, Text, Button } from 'react-native';
-import LandingHeader from './WelcomeHeader'
+import LandingHeader from './LandingHeader'
 import { useDispatch } from 'react-redux'
 
 

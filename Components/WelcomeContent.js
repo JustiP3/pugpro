@@ -25,6 +25,10 @@ export default function WelcomeContent (props) {
         dispatch({type: 'LOGIN', data: {userName: "hard-coded in WelcomeContent", password: "hard-coded in WelcomeContent"}})
     }
 
+    const handleSignupSubmit = () => {
+        dispatch({type: 'SIGNUP', data: {userName: "hard-coded in WelcomeContent", password: "hard-coded in WelcomeContent"}})
+    }
+
     if (screen === 'home') {
         return (
             <View style={styles.container} >         
@@ -48,6 +52,7 @@ export default function WelcomeContent (props) {
         return (
             <View style={styles.container} >         
               <Text style={styles.text}>Sign up here!</Text>
+              <Button title="Sign Up" onPress={handleSignupSubmit}>Sign up</Button>
               <Button title="Back" onPress={handleBackClick}>Back</Button>              
               <StatusBar style="auto" />
             </View>
