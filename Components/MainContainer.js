@@ -1,16 +1,22 @@
-import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { SafeAreaView } from 'react-native';
+import { useSelector } from 'react-redux'
 import Welcome from './Welcome'
-
+import Landing from './Landing'
 
 
 export default function MainContainer() { 
-    return (
-      <SafeAreaView>
-      <Welcome />
-      </SafeAreaView>
-    );
+  const loggedIn = useSelector(state => state.loggedIn)
+
+    if(loggedIn) {
+      return (        
+          <Landing />       
+      );
+    } else {
+      return (     
+          <Welcome />        
+      );
+    }
+    
 }
 
 

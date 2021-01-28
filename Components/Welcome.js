@@ -6,9 +6,9 @@ import WelcomeContent from './WelcomeContent'
 
 export default function Welcome() {
   return (
-    <View >  
+    <View style={styles.container}>  
         <WelcomeHeader style={styles.title}/>    
-        <WelcomeContent style={styles.container}/>
+        <WelcomeContent />
       <StatusBar style="auto" />
     </View>
   );
