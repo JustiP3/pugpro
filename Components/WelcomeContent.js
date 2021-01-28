@@ -2,11 +2,13 @@ import { StatusBar } from 'expo-status-bar';
 import React, { useState, useEffect } from 'react';
 import { StyleSheet, View, Button } from 'react-native';
 import { Text } from 'react-native-elements'
+import { useDispatch } from 'react-redux'
 
 
 
 export default function WelcomeContent (props) {
     const [screen, setScreen] = useState('home');
+    const dispatch = useDispatch()
 
     const handleLoginClick = () => {
         setScreen('login')
@@ -17,6 +19,10 @@ export default function WelcomeContent (props) {
   
     const handleSignupClick = () => {
         setScreen('signup')
+    }
+
+    const handleLoginSubmit = () => {        
+        dispatch({type: 'LOGIN', data: {userName: "hard-coded in WelcomeContent", password: "hard-coded in WelcomeContent"}})
     }
 
     if (screen === 'home') {
@@ -33,6 +39,7 @@ export default function WelcomeContent (props) {
         return (
             <View style={styles.container} >         
               <Text style={styles.text}>Log in here !</Text>
+              <Button title="Log In" onPress={handleLoginSubmit}>Log In</Button>
               <Button title="Back" onPress={handleBackClick}>Back</Button>
               <StatusBar style="auto" />
             </View>
