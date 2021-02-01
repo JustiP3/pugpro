@@ -1,5 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
-import React from 'react';
+import React, {useEffect} from 'react';
 import { View, Text, Button } from 'react-native';
 import { useDispatch, useSelector } from 'react-redux'
 import LandingHeader from './LandingHeader'
@@ -13,6 +13,12 @@ export default function Landing() {
   const screen = useSelector(state => state.screen)
 
   const handleLogout = () => dispatch({type:'LOGOUT'})
+
+  //useEffect(() => {
+    // call api for user data
+    //dispatch({type: 'SET_USERDATA'}) this may be unneccessary. send all data in the login or signup request 
+  //})
+  
 
   switch (screen) {
     case 'home':

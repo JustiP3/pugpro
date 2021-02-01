@@ -2,16 +2,12 @@ Description: This is an app for everyone who wants to compete or enjoy activitie
 Tech: React, React Native, Redux
 
 To Do:
--implement redux
 
 -create first draft of all components
 
--connect to backend api
+-Configure User form - make form reactive, additional input fields will appear after submitting one input
 
-function reducer(store, action) {
-const updated = {...store}
-//return updated store
-}
+-connect to backend api
 
 store structure:
 {
