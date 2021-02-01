@@ -16,7 +16,7 @@ export default function ConfigureUser (props) {
   }, [register])
 
   const onSubmit = (data) => {
-    Alert.alert("form data", data)
+    console.log(data)
   }
 
     return(
@@ -33,7 +33,7 @@ export default function ConfigureUser (props) {
       <View style={styles.button}>
         <Button 
         title='S U B M I T'
-        color='white'
+        color='black'
         style={styles.buttonText}
         onPress={handleSubmit(onSubmit)}
         />
@@ -47,13 +47,28 @@ export default function ConfigureUser (props) {
     container: {
       flex: 1,
       backgroundColor: 'dodgerblue',  
-      justifyContent: 'center'   
+      justifyContent: 'center' , 
+      minHeight: 200,   
+      textAlign: 'center'
     }, 
     text: {
+      justifyContent: 'space-evenly',
       textAlign: 'center'
     },
     title: {
       justifyContent: 'flex-start'
+    },
+    input: {
+      justifyContent: 'space-evenly',
+      borderColor: 'gray', 
+      borderWidth: 1
+    },
+    button: {
+     
+    },
+    buttonText: {
+      fontSize: 12,
+      fontWeight: "500",
     }
   });
   
