@@ -17,6 +17,7 @@ export default function ConfigureUser (props) {
 
   const onSubmit = (data) => {
     console.log(data)
+    props.handleUserConfig()
   }
 
     return(

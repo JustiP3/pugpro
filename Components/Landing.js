@@ -13,6 +13,7 @@ export default function Landing() {
   const screen = useSelector(state => state.screen)
 
   const handleLogout = () => dispatch({type:'LOGOUT'})
+  const handleUserConfig = () => dispatch({type: 'CHANGE_SCREEN', data: {screen: 'landing'}})
 
   //useEffect(() => {
     // call api for user data
@@ -21,7 +22,7 @@ export default function Landing() {
   
 
   switch (screen) {
-    case 'home':
+    case 'home': // in the future 'home' is the welcome screen when not logged in, 'landing' is for logged in users
       return (
         <View >  
             <LandingHeader />    
@@ -34,7 +35,7 @@ export default function Landing() {
       return (
         <View >  
             <LandingHeader />    
-            <ConfigureUser />
+            <ConfigureUser handleUserConfig={handleUserConfig} />
             <Button title="Logout" onPress={handleLogout}>Log Out</Button>
           <StatusBar style="auto" />
         </View>
