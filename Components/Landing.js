@@ -12,8 +12,14 @@ export default function Landing() {
   const dispatch = useDispatch()
   const screen = useSelector(state => state.screen)
 
-  const handleLogout = () => dispatch({type:'LOGOUT'})
-  const handleUserConfig = () => dispatch({type: 'CHANGE_SCREEN', data: {screen: 'landing'}})
+  const handleLogout = () => {
+    // send API request 
+    dispatch({type:'LOGOUT'})
+  }
+  const handleUserConfig = () => {
+    // send API request 
+    dispatch({type: 'CHANGE_SCREEN', data: {screen: 'landing'}})
+  }
 
   //useEffect(() => {
     // call api for user data
