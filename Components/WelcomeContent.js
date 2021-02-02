@@ -4,13 +4,14 @@ import { StyleSheet, View, Button } from 'react-native';
 import { Text } from 'react-native-elements'
 import { useDispatch, useSelector } from 'react-redux'
 import Login from './Login'
+import Signup from './Signup'
 
 
 
 export default function WelcomeContent (props) {
     const [screen, setScreen] = useState('home');
     const dispatch = useDispatch()
-    const userName = useSelector(state => state.userData.userName)
+    
 
     const handleLoginClick = () => {
         setScreen('login')
@@ -28,8 +29,9 @@ export default function WelcomeContent (props) {
         dispatch({type: 'LOGIN', data: {userName, password}})
     }
 
-    const handleSignupSubmit = () => {
-        dispatch({type: 'SIGNUP', data: {userName: "hard-coded in WelcomeContent", password: "hard-coded in WelcomeContent"}})
+    const handleSignupSubmit = ({userName, password}) => {
+      // send API request
+        dispatch({type: 'SIGNUP', data: {userName, password}})
     }
 
     if (screen === 'home') {
@@ -55,7 +57,7 @@ export default function WelcomeContent (props) {
         return (
             <View style={styles.container} >         
               <Text style={styles.text}>Sign up here!</Text>
-              <Button title="Sign Up" onPress={handleSignupSubmit}>Sign up</Button>
+              <Signup handleSignupSubmit={handleSignupSubmit} />
               <Button title="Back" onPress={handleBackClick}>Back</Button>              
               <StatusBar style="auto" />
             </View>
