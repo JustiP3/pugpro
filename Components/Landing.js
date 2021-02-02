@@ -22,7 +22,7 @@ export default function Landing() {
   
 
   switch (screen) {
-    case 'home': // in the future 'home' is the welcome screen when not logged in, 'landing' is for logged in users
+    case 'landing': 
       return (
         <View >  
             <LandingHeader />    
@@ -44,7 +44,7 @@ export default function Landing() {
       return (
         <View >  
             <LandingHeader />    
-            <Text>You are Logged In!</Text>
+            <Text>Redux state screen does not match a case in Landing component</Text>
             <Button title="Logout" onPress={handleLogout}>Log Out</Button>
           <StatusBar style="auto" />
         </View>
