@@ -1,4 +1,14 @@
-export default function reducer(state = {loggedIn: false, token: null, screen: 'home', userData: {}}, action) {
+const initialState = {
+    loggedIn: false, 
+    token: null, 
+    screen: 'home',
+     userData: {
+         userName: "",
+         password: "",
+         activities: []
+     }}
+
+export default function reducer(state = initialState, action) {
 
     switch (action.type) {
         case 'LOGIN':
@@ -40,9 +50,17 @@ export default function reducer(state = {loggedIn: false, token: null, screen: '
                             return ({...state, screen: 'home'})
                         }
                     }
-        case 'SET_USERDATA':
-                //need to set user data
-                break;
+        case 'ADD_ACTIVITY': 
+                return(
+                    {...state, 
+                        userData: {...state.userData, 
+                            activities: [ 
+                                {name: action.data.activity, selfRating: action.data.selfRating}
+                            ]
+                        }
+                    }
+                )
+                
         default:
                 return state 
     } 

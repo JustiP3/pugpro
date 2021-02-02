@@ -9,6 +9,7 @@ import { useForm } from 'react-hook-form'
 export default function ConfigureUser (props) {
 
   const { register, handleSubmit, setValue} = useForm();
+ 
 
   useEffect(() => {
     register('activity');
@@ -17,7 +18,7 @@ export default function ConfigureUser (props) {
 
   const onSubmit = (data) => {
     console.log(data)
-    props.handleUserConfig()
+    props.handleUserConfig({activity: data.activity, selfRating: data.selfRating})
   }
 
     return(

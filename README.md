@@ -3,6 +3,10 @@ Tech: React, React Native, Redux
 
 To Do:
 
+- Create a stats component
+
+- ADD_ACTIVITY - Invalid attempt to spread non-iterable instance when add first activity. Removed ...state.userData.activities.
+
 -create first draft of all components
 
 -Configure User form - make form reactive, additional input fields will appear after submitting one input
@@ -14,7 +18,14 @@ store structure:
 loggedin: false,
 token: null,
 screen: home
-userData: {}
+userData: {
+userName: "",
+password: "",
+activities: [
+basketball: { name: "basketball", wins: "2", losses: "2", selfRating: "6"},
+hiking: {name: "hiking", wins: "1", losses: "0", selfRating: "4"}
+]
+}
 }
 
 Actions:

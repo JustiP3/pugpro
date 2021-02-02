@@ -16,8 +16,10 @@ export default function Landing() {
     // send API request 
     dispatch({type:'LOGOUT'})
   }
-  const handleUserConfig = () => {
+  const handleUserConfig = ({activity, selfRating}) => {
     // send API request 
+    // set userData
+    dispatch({type: 'ADD_ACTIVITY', data: {activity, selfRating}})
     dispatch({type: 'CHANGE_SCREEN', data: {screen: 'landing'}})
   }
 
