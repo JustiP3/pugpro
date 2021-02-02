@@ -4,6 +4,7 @@ import { View, Text, Button, StyleSheet } from 'react-native';
 import { useDispatch, useSelector } from 'react-redux'
 import LandingHeader from './LandingHeader'
 import ConfigureUser from './ConfigureUser'
+import StatsSummary from './StatsSummary'
 
 
 
@@ -36,6 +37,7 @@ export default function Landing() {
             <LandingHeader />    
             <View style={styles.container}>
               <Text style={styles.text}>You are Logged In!</Text>
+              <StatsSummary />
               <Button title="Logout" onPress={handleLogout}>Log Out</Button>
         
           </View>
