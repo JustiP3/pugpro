@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import LandingHeader from './LandingHeader'
 import ConfigureUser from './ConfigureUser'
 import StatsSummary from './StatsSummary'
+import EditProfile from './EditProfile'
 
 
 export default function Landing() {
@@ -21,13 +22,7 @@ export default function Landing() {
     dispatch({type: 'ADD_ACTIVITY', data: {activity, selfRating}})
     dispatch({type: 'CHANGE_SCREEN', data: {screen: 'landing'}})
   }
-
-  //useEffect(() => {
-    // call api for user data
-    //dispatch({type: 'SET_USERDATA'}) this may be unneccessary. send all data in the login or signup request 
-  //})
-  
-
+ 
   switch (screen) {
     case 'landing': 
       return (
@@ -51,6 +46,18 @@ export default function Landing() {
           </View>
         </View>
       );
+      case 'editProfile':
+        return (
+          <View style={styles.container} >  
+            <LandingHeader /> 
+              
+              <View style={styles.container}>  
+              <EditProfile /> 
+              <ConfigureUser handleUserConfig={handleUserConfig} />
+              <Button title="Logout" onPress={handleLogout}>Log Out</Button>
+            </View>
+          </View>
+        );
     default:
       return (
         <View style={styles.container} >  

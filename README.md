@@ -3,13 +3,9 @@ Tech: React, React Native, Redux
 
 To Do:
 
-- StatsSummary - cannot find variable 'activities' when we login (activities should be set to equal [])
-
 - Create an edit profile component
 
 - Add functionality to the header menu button and home button
-
-- ADD_ACTIVITY - Invalid attempt to spread non-iterable instance when add first activity. Removed ...state.userData.activities.
 
 -create first draft of all components
 
