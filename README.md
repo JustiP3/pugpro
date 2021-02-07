@@ -7,11 +7,15 @@ To Do:
 
 - Landing Header menu button should display a dropdown menu
 
--create first draft of all components - other user's profile, create game, find game, search/add friends
+- How to get location? Use that to populate userData
 
--Configure User form - make form reactive, additional input fields will appear after submitting one input
+- How to access time? How to handle pastgames / upcoming games?
 
--connect to backend api
+- create first draft of all components - other user's profile, create game, search/add friends
+
+- Configure User form - make form reactive, additional input fields will appear after submitting one input
+
+- connect to backend api
 
 store structure:
 {
@@ -25,7 +29,8 @@ location: "",
 activities: [
 { name: "basketball", wins: "2", losses: "2", selfRating: "6"},
 {name: "hiking", wins: "1", losses: "0", selfRating: "4"}
-]
+],
+games: []
 }
 }
 
