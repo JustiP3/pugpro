@@ -26,8 +26,8 @@ userData: {
 userName: "",
 password: "",
 activities: [
-basketball: { name: "basketball", wins: "2", losses: "2", selfRating: "6"},
-hiking: {name: "hiking", wins: "1", losses: "0", selfRating: "4"}
+{ name: "basketball", wins: "2", losses: "2", selfRating: "6"},
+{name: "hiking", wins: "1", losses: "0", selfRating: "4"}
 ]
 }
 }

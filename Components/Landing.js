@@ -1,4 +1,3 @@
-import { StatusBar } from 'expo-status-bar';
 import React, {useEffect} from 'react';
 import { View, Text, Button, StyleSheet } from 'react-native';
 import { useDispatch, useSelector } from 'react-redux'
@@ -7,11 +6,10 @@ import ConfigureUser from './ConfigureUser'
 import StatsSummary from './StatsSummary'
 
 
-
-
 export default function Landing() {
   const dispatch = useDispatch()
   const screen = useSelector(state => state.screen)
+
 
   const handleLogout = () => {
     // send API request 

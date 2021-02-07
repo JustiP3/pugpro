@@ -2,11 +2,12 @@ const initialState = {
     loggedIn: false, 
     token: null, 
     screen: 'home',
-     userData: {
-         userName: "",
-         password: "",
-         activities: []
-     }}
+    userData: {
+        userName: "",
+        password: "",
+        activities: [{name: "initial", wins: "2", losses: "2", selfRating: "6"}]
+     }
+    }
 
 export default function reducer(state = initialState, action) {
 
@@ -16,8 +17,10 @@ export default function reducer(state = initialState, action) {
                 ...state, 
                 loggedIn: true,
                 token: "4ADB8",
-                userData: {
-                    userName: action.data.userName
+                userData: {                    
+                    userName: action.data.userName,
+                    password: action.data.password,
+                    activities: [...state.userData.activities]
                 },
                 screen: 'landing'
             })
@@ -27,7 +30,9 @@ export default function reducer(state = initialState, action) {
                 loggedIn: true,
                 token: "4ADB8",
                 userData: {
-                    userName: action.data.userName
+                    ...state.userData,
+                    userName: action.data.userName,
+                    password: action.data.password
                 },
                 screen: 'configureUser'
             })
@@ -41,6 +46,7 @@ export default function reducer(state = initialState, action) {
                 })
         case 'CHANGE_SCREEN':
                     const newScreen = action.data.screen; 
+                    
                     if (state.loggedIn === true) {
                         return ({...state, screen: newScreen})
                     } else {
@@ -54,8 +60,13 @@ export default function reducer(state = initialState, action) {
                 return(
                     {...state, 
                         userData: {...state.userData, 
-                            activities: [ 
-                                {name: action.data.activity, selfRating: action.data.selfRating}
+                            activities: [                                 
+                                {
+                                    name: action.data.activity, 
+                                    selfRating: action.data.selfRating,
+                                    wins: "0",
+                                    losses: "0"
+                                }
                             ]
                         }
                     }
