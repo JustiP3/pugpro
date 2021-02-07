@@ -8,11 +8,7 @@ import { useDispatch, useSelector } from 'react-redux'
 
 export default function StatsSummary (props) {
   
-  const activities = useSelector(state => state.userData.activities)
-
-    console.log(activities)
-
- 
+  const activities = useSelector(state => state.userData.activities) 
     
 
    if (activities.length > 0) {
