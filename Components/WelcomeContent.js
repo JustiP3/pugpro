@@ -11,10 +11,7 @@ import Signup from './Signup'
 export default function WelcomeContent (props) {
     const [screen, setScreen] = useState('home');
     const dispatch = useDispatch()
-    const activities = useSelector(state => state.userData.activities)
-
-    console.log(activities)
-    
+        
 
     const handleLoginClick = () => {
         setScreen('login')

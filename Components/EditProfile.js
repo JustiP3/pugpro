@@ -41,7 +41,9 @@ export default function EditProfile (props) {
 */
     return(
     <View style={styles.container}>
-      <Text style={styles.text}>Test Edit Profile Content</Text>      
+      <Text style={styles.text}>
+          Test Edit Profile Content. Add email, edit username?, change password.
+        </Text>      
     </View>
     )
   }

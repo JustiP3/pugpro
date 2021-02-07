@@ -50,11 +50,8 @@ export default function Landing() {
         return (
           <View style={styles.container} >  
             <LandingHeader /> 
-              
               <View style={styles.container}>  
               <EditProfile /> 
-              <ConfigureUser handleUserConfig={handleUserConfig} />
-              <Button title="Logout" onPress={handleLogout}>Log Out</Button>
             </View>
           </View>
         );
