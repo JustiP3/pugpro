@@ -5,6 +5,7 @@ import LandingHeader from './LandingHeader'
 import ConfigureUser from './ConfigureUser'
 import StatsSummary from './StatsSummary'
 import EditProfile from './EditProfile'
+import FindGame from './FindGame'
 
 
 export default function Landing() {
@@ -22,6 +23,12 @@ export default function Landing() {
     dispatch({type: 'ADD_ACTIVITY', data: {activity, selfRating}})
     dispatch({type: 'CHANGE_SCREEN', data: {screen: 'landing'}})
   }
+
+  const handleFindGame = () => {
+    // display Find Games Component
+    //User will select activity type, then API request will be sent
+    dispatch({type: 'CHANGE_SCREEN', data: {screen: 'findGame'}})
+  }
  
   switch (screen) {
     case 'landing': 
@@ -31,8 +38,8 @@ export default function Landing() {
             <View style={styles.container}>
               <Text style={styles.text}>You are Logged In!</Text>
               <StatsSummary />
-              <Button title="Logout" onPress={handleLogout}>Log Out</Button>
-        
+              <Button title="Find Game" onPress={handleFindGame}>Find Games</Button>
+              <Button title="Logout" onPress={handleLogout}>Log Out</Button>        
           </View>
         </View>
       );
@@ -55,6 +62,15 @@ export default function Landing() {
             </View>
           </View>
         );
+        case 'findGame':
+          return (
+            <View style={styles.container} >  
+              <LandingHeader /> 
+                <View style={styles.container}>  
+                <FindGame /> 
+              </View>
+            </View>
+          );
     default:
       return (
         <View style={styles.container} >  

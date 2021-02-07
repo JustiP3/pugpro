@@ -12,7 +12,7 @@ export default function StatsSummary (props) {
     
 
    if (activities.length > 0) {
-       const entries = activities.map(x=><Text style={styles.text} key={x.name}>{x.name} - Self Rating: {x.selfRating}</Text>)
+       const entries = activities.map(x=><Text style={styles.text} key={x.name}>{x.name} | Self Rating: {x.selfRating} | Wins: {x.wins} | Losses: {x.losses}</Text>)
     return (
         <View style={styles.container} >         
             <Text style={styles.text}>Stats Summary</Text>

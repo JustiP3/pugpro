@@ -3,11 +3,11 @@ Tech: React, React Native, Redux
 
 To Do:
 
-- Create an edit profile component
+- Add a relavent form to Edit Profile Component
 
-- Add functionality to the header menu button and home button
+- Landing Header menu button should display a dropdown menu
 
--create first draft of all components
+-create first draft of all components - other user's profile, create game, find game, search/add friends
 
 -Configure User form - make form reactive, additional input fields will appear after submitting one input
 
@@ -21,6 +21,7 @@ screen: home
 userData: {
 userName: "",
 password: "",
+location: "",
 activities: [
 { name: "basketball", wins: "2", losses: "2", selfRating: "6"},
 {name: "hiking", wins: "1", losses: "0", selfRating: "4"}
