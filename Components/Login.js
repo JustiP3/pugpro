@@ -15,7 +15,6 @@ export default function Login (props) {
   }, [register])
 
   const onSubmit = (data) => {
-    console.log(data)
     props.handleLoginSubmit({userName: data.userName, password: data.password})
   }
 

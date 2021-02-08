@@ -6,6 +6,7 @@ import ConfigureUser from './ConfigureUser'
 import StatsSummary from './StatsSummary'
 import EditProfile from './EditProfile'
 import FindGame from './FindGame'
+import MyEventsList from './MyEventsList'
 
 
 export default function Landing() {
@@ -38,6 +39,7 @@ export default function Landing() {
             <View style={styles.container}>
               <Text style={styles.text}>You are Logged In!</Text>
               <StatsSummary />
+              <MyEventsList />
               <Button title="Find Game" onPress={handleFindGame}>Find Games</Button>
               <Button title="Logout" onPress={handleLogout}>Log Out</Button>        
           </View>

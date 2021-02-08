@@ -7,7 +7,7 @@ const initialState = {
         password: "",
         location: 'example city',
         activities: [{name: "initial", wins: "0", losses: "0", selfRating: "0", id: "1"}],
-        games: [{activity: "initial", date: "2/2/22", time: "5:00 pm", id: "1"}]
+        events: [{activity: "initial", date: "2/2/22", location: "Example Park", time: "5:00 pm", id: "1"}]
      }
     }
 
