@@ -61,6 +61,7 @@ export default function Landing() {
             <LandingHeader /> 
               <View style={styles.container}>  
               <EditProfile /> 
+              <ConfigureUser handleUserConfig={handleUserConfig} />
             </View>
           </View>
         );
