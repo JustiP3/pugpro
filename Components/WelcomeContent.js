@@ -39,6 +39,7 @@ export default function WelcomeContent (props) {
             <View style={styles.container} >         
               <Text h1 style={styles.title}>Welcome to PUG Pro</Text>
               <Text style={styles.text}>Test Content. This is an app for everyone who wants to compete or enjoy activities with others of similar ability.</Text>
+              <Text style={styles.text}>{props.location}</Text>
               <Button title="Log In" onPress={handleLoginClick}>Log In</Button>
               <Button title="Sign Up" onPress={handleSignupClick}>Sign Up</Button>
               <StatusBar style="auto" />

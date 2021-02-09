@@ -4,11 +4,11 @@ import { View, StyleSheet } from 'react-native';
 import WelcomeHeader from './WelcomeHeader'
 import WelcomeContent from './WelcomeContent'
 
-export default function Welcome() {
+export default function Welcome(props) {
   return (
     <View style={styles.container}>  
         <WelcomeHeader style={styles.title}/>    
-        <WelcomeContent />
+        <WelcomeContent location={props.location} />
       <StatusBar style="auto" />
     </View>
   );

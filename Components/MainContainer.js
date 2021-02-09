@@ -4,16 +4,16 @@ import Welcome from './Welcome'
 import Landing from './Landing'
 
 
-export default function MainContainer() { 
+export default function MainContainer(props) { 
   const loggedIn = useSelector(state => state.loggedIn)
-
+  
     if(loggedIn) {
       return (        
           <Landing />       
       );
     } else {
       return (     
-          <Welcome />        
+          <Welcome location={props.text} />        
       );
     }
     
