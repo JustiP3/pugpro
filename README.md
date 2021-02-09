@@ -1,5 +1,5 @@
 Description: This is an app for everyone who wants to compete or enjoy activities with others of similar ability.
-Tech: React, React Native, Redux
+Tech Stack: React, React Native, Redux, React-Hook-Form, Expo-Location
 
 To Do:
 
